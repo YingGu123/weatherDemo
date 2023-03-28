@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.weatherinfo.model.WeatherLiveInfo" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.city}"
+            android:textAppearance="@style/textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.weather}"
+            android:textAppearance="@style/textAppearanceCaption1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWindPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{item.windPower}"
+            android:textAppearance="@style/textAppearanceCaption1"
+            app:layout_constraintEnd_toStartOf="@+id/tvWeather"
+            app:layout_constraintTop_toTopOf="@+id/tvWeather" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReportTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.reportTime}"
+            android:textAppearance="@style/textAppearanceBody1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{@string/temperature_str(item.temperature)}"
+            android:textAppearance="@style/textAppearanceCaption1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReportTime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

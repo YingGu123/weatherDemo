@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WeatherDemo</string>
+    <string name="temperature_str">温度：%s</string>
+    <string name="error_server_msg">Sorry, we have encountered a server error. Please try again later.</string>
+    <string name="error_server_title">Server Error</string>
+    <string name="button_retry">Retry</string>
+</resources>
